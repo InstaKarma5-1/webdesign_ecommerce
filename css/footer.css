@@ -45,6 +45,10 @@
     border-right: 1px solid #A3F7BF;
 }
 
+#footer-page-links a:nth-child(4) {
+    border-right: none;
+}
+
 #copyright {
     text-align: right;
     padding: 0% 1.25% 1% 0%;
