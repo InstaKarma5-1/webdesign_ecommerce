@@ -1,0 +1,38 @@
+body {
+    background-color: #191D21;
+    color: #A3F7BF;
+    padding: 0% 25% 0% 25%;
+}
+
+.shopping-cart-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.shopping-cart-item img {
+    width: 15%;
+    height: 15%;
+}
+
+.shopping-cart-item-info {
+    width: 15%;
+}
+
+.shopping-cart-item-quantity {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+}
+
+.shopping-cart-delete-button {
+    align-self: flex-start  ;
+}
+
+#shopping-cart-total {
+    float: right;
+}
