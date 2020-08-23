@@ -1,0 +1,30 @@
+body{
+    background-color: #191D21; 
+    color: #A3F7BF;
+}
+
+#form_box{
+    width: 450px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Abel', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 40px;
+
+}
+
+.input_field{
+    border: none;
+    font-size: 25px;
+    min-height: 52px;
+    background: #A3F7BF;
+    box-shadow: 0px 0px 25px #29A19C;
+    border-radius: 223px;
+}
+
+#LoginBacon{
+ text-align: center;
+}
