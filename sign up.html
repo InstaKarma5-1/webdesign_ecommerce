@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="css/signup.css">
+    
+</head>
+<body>
+    
+    
+    <p style="text-align: center; font-family: 'Abel', sans-serif; font-size: 25px; 
+    "><strong>SIGN UP</strong></p>
+   
+   <br>
+
+    <div id="form_box">
+        <form action="form.php" method="POST">
+            
+            <label for="EMAIL">EMAIL</label><br>
+            <input class="input_field" name="EMAIL" type="email" placeholder="hellocannot@gsc.com" size="31" required>
+
+            <br><br>
+
+            <label for="PASSWORD">PASSWORD</label><br>
+            <input class="input_field" name="PASSWORD" type="password" size="31" required>
+    
+            <br><br>
+
+            <label for="CONFIRM PASSWORD">CONFIRM PASSWORD</label><br>
+            <input class="input_field" name="CONFIRM PASSWORD" type="password" size="31" required>         
+    
+            <br><br>
+
+            <label for="PHONE NUMBER">PHONE NUMBER</label><br>
+            <input class="input_field" name="PHONE NUMBER" type="tel" placeholder="0123456789" size="31" required>
+    
+            <br><br>
+            
+    
+            <p id="RegisterBacon">
+                <button type="submit" style="border: 0; background: transparent">
+                    <img src="Icons/RegisterBacon.png" width="230" height="110" alt="submit" />
+                </button>
+            </p>
+        </form>  
+    </div>
+        
+
+    <?php
+
+        $name = $_POST["name"];
+        echo $name;
+
+    ?>
+</body>
+</html>
