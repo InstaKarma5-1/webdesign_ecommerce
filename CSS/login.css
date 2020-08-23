@@ -17,14 +17,19 @@ body{
 }
 
 .input_field{
+    margin-top: 10px;
     border: none;
     font-size: 25px;
     min-height: 52px;
     background: #A3F7BF;
     box-shadow: 0px 0px 25px #29A19C;
     border-radius: 223px;
+    outline: none;
 }
 
 #LoginBacon{
  text-align: center;
+ cursor: pointer;
+ border: 0; 
+ background: transparent;
 }
