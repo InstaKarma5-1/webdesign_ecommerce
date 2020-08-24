@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+body{
+	background:#191D21;
+}
+.p_info_top{
+	display:flex;
+	color:#A0F4BE;
+	font-family: "Abel", sans-serif;
+
+}
+.p_info_pic{
+	width:25%;
+	height:auto;
+	padding-left:12.5%;
+	padding-top:20px;
+}
+.p_info_top_content{
+	flex:0 0 50%;
+
+}
+.divider{
+	content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 0 auto; /* This will center the border. */
+    width: 75%; 
+    padding-top: 3%; /* This creates some space between the element and the border. */
+	border-bottom: solid 1px #A3F7BF;
+}
+.p_info_bottom{
+	color:#A0F4BE;
+	font-family: "Abel", sans-serif;
+	padding-left:12.5%;
+}
+.column{
+	float:left;
+	width:28%;
+	text-align:center;
+}
