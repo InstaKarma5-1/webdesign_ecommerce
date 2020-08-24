@@ -1,6 +1,11 @@
-body{
-    background-color: #212529;
+*{
+    cursor: url("../Icons/circular_cursor_1.svg"), auto;
 }
+
+body{
+    background-color: #191D21;
+}
+
 
 .search_bar{
     width: 50%;
@@ -20,3 +25,5 @@ body{
     font-size: 40px;
     font-family: 'Abel', sans-serif;
 }
+
+
