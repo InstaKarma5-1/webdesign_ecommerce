@@ -31,20 +31,18 @@
 
     $sql="SELECT * FROM user WHERE email = '$email';";
     $res = mysqli_query($conn, $sql);
-    if (mysqli_num_rows($res) > 0) { // Warning: mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in line 34
-        // output data of each row
-        $row = mysqli_fetch_assoc($res);    //fetch a result row as associative array
-        if($email==$row['email']) // change it to just else
+    if (mysqli_num_rows($res) > 0) { 
+        $row = mysqli_fetch_assoc($res);    
+        if($email==$row['email']) 
         {
             echo "Email already exists";
-        }
-        else{
-            echo "*$!?!* ok lahhh"; // don't put it here
-            $valid = true;
+            exit;
         }
     }
-
-    //https://codewithawa.com/posts/check-if-user-already-exists-without-submitting-form
+    else{
+        echo "*$!?!* ok lahhh" . "<br>"; 
+        $valid = true;
+    }
 
     // After everything is validated
     if($valid == true){

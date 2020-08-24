@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
+*{
+    cursor: url("../Icons/circular_cursor_1.svg"), auto;
+}
+
 body{
     background-color: #191D21;
 }

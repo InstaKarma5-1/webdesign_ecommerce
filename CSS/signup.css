@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
-/*
+
 *{
     cursor: url("../Icons/circular_cursor_1.svg"), auto;
-}*/
+}
 
 
 body {
@@ -10,11 +10,28 @@ body {
     color: #A3F7BF;
 }
 
+#title{
+    text-align: center; 
+    font-family: 'Abel', sans-serif; 
+    font-size: 35px; 
+    -webkit-animation: titleGlow 1.5s ease-in-out infinite alternate;
+    -moz-animation: titleGlow 1.5s ease-in-out infinite alternate;
+    animation: titleGlow 1.5s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes titleGlow {
+    from {
+      text-shadow: 0 0 10px #A3F7BF, 0 0 20px #A3F7BF, 0 0 30px #A3F7BF, 0 0 40px #29A19C ;
+    }
+    to {
+      text-shadow: 0 0 20px #29A19C, 0 0 30px #29A19C, 0 0 40px #29A19C ;
+    }
+}
+
 #form_box {
-    width: 450px;
+    width:450px;
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     font-family: 'Abel', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -23,6 +40,8 @@ body {
 }
 
 .input_field {
+    width: 434px;
+    margin-left: auto;
     border: none;
     margin-top: 10px;
     font-size: 25px;
@@ -32,6 +51,24 @@ body {
     border-radius: 223px;
     outline: none;
     padding-left: 15px;
+    -webkit-animation: glow 1.5s ease-in-out infinite alternate;
+    -moz-animation: glow 1.5s ease-in-out infinite alternate;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+.input_field:focus{
+    -webkit-animation: inputGlow 1.5s ease-in-out infinite alternate;
+    -moz-animation: inputGlow 1.5s ease-in-out infinite alternate;
+    animation: inputGlow 1.5s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes inputGlow {
+    from {
+        box-shadow: 0 0 10px #A3F7BF, 0 0 20px #A3F7BF, 0 0 30px #A3F7BF;
+    }
+    to {
+        box-shadow: 0 0 20px #29A19C, 0 0 30px #29A19C;
+    }
 }
 
 #RegisterBacon {

@@ -10,8 +10,7 @@
 
 </head>
 <body>
-    <p style="text-align: center; font-family: 'Abel', sans-serif; font-size: 25px; text-shadow: 0px 0px 10px #29A19C;
-    "><strong>SIGN UP</strong></p>
+    <p id="title"><u>SIGN UP</u></p>
    
    <br>
 
@@ -19,26 +18,26 @@
         <form action="form-handlers/sign-up-form.php" method="post">
             
             <label for="email">EMAIL</label><br>
-            <input class="input_field" id="email" name="email" type="email" placeholder="hellocannot@gsc.com" size="30" onblur="validate()" required>
+            <input class="input_field" id="email" name="email" type="email" placeholder="hellocannot@gsc.com" onblur="validate()" required>
             
             <p id="emailValidation">Enter proper email woi diu lei nyasing</p>
 
             <br><br>
 
             <label for="password">PASSWORD</label><br>
-            <input class="input_field" id="password" name="password" type="password" size="30" onblur="validate()" required>
+            <input class="input_field" id="password" name="password" type="password" onblur="validate()" required>
     
             <br><br>
 
             <label for="confirm-password">CONFIRM PASSWORD</label><br>
-            <input class="input_field" id="confirm-password" name="confirm-password" type="password" size="30" onblur="validate()" required>         
+            <input class="input_field" id="confirm-password" name="confirm-password" type="password" onblur="validate()" required>         
     
             <p id="passwordValidation">Password do not match! diu lei nyasing</p>
 
             <br><br>
 
             <label for="phone">PHONE NUMBER</label><br>
-            <input class="input_field" id="phone" name="phone" type="tel" placeholder="012-3456789" size="30" pattern="01[0-9]-[0-9]{7,8}" onblur="validate()" required>
+            <input class="input_field" id="phone" name="phone" type="tel" placeholder="012-3456789" pattern="01[0-9]-[0-9]{7,8}" onblur="validate()" required>
     
             <br><br>
             
