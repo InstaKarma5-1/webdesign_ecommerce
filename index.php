@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Baycon & E.GG</title>
+        <title><title>Baycon & E.GG</title</title>
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <link rel="stylesheet" type="text/css" href="css/navbar.css">
         <link rel="stylesheet" type="text/css" href="css/footer.css">
@@ -13,5 +13,6 @@
         <div class="search_bar">
             <input id="main_search" name="Search" type="text" placeholder="Searching for games?">
         </div>
+        <?php include "footer.html"; ?>
     </body>
 </html>
