@@ -1,9 +1,16 @@
-body{
-    background-color: #191D21; 
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+/*
+*{
+    cursor: url("../Icons/circular_cursor_1.svg"), auto;
+}*/
+
+
+body {
+    background-color: #191D21;
     color: #A3F7BF;
 }
 
-#form_box{
+#form_box {
     width: 450px;
     position: relative;
     margin-left: auto;
@@ -13,10 +20,9 @@ body{
     font-weight: normal;
     font-size: 23px;
     line-height: 40px;
-
 }
 
-.input_field{
+.input_field {
     border: none;
     margin-top: 10px;
     font-size: 25px;
@@ -25,11 +31,19 @@ body{
     box-shadow: 0px 0px 25px #29A19C;
     border-radius: 223px;
     outline: none;
+    padding-left: 15px;
 }
 
-#RegisterBacon{
- text-align: center;
- cursor: pointer;
- border: 0; 
- background: transparent;
+#RegisterBacon {
+    text-align: center;
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+}
+
+#emailValidation, #passwordValidation {
+    display: none;
+    margin-bottom: -60px;
+    color: #FF5555;
+    text-shadow: 0px 0px 10px #ff3d51;
 }

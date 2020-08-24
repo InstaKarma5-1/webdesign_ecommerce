@@ -34,7 +34,7 @@ if ($conn->connect_error) {
 $sql = "CREATE TABLE user (
     userId INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(50) NOT NULL,
-    password VARCHAR(50),
+    passwd VARCHAR(50) NOT NULL,
     phone VARCHAR(12) NOT NULL
     )";
 
