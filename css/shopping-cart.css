@@ -49,6 +49,7 @@ body {
     color: inherit;
     font-size: 1.25vw;
     cursor: pointer;
+    outline: none;
 }
 
 .shopping-cart-item-quantity button:nth-child(1) {
@@ -72,6 +73,7 @@ body {
     font-size: 1.25vw;
     flex: 1 1 20px;
     cursor: pointer;
+    outline: none;
 }
 
 hr {
