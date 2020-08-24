@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
-	*{
+	.navbar{
 		box-sizing: border-box;
 		margin: 0;
-		paddingL 0;
+		padding: 0;
 		background-color:#435055;
 	}
-	li, a, button{
+	li, a{
 		font-family: "Abel", sans-serif;
 		font-weight:500;
 		font-size:16px;
 		color:#A0F4BE;
 		text-decoration:none;
 	}
-	header{
+	.nav_header{
 		display:flex;
 		justify-content: flex-end;
 		align-items:center;
@@ -35,7 +35,12 @@
 	.nav_links li a:hover{
 		color:#0088a9
 	}
-	button{
+	.cart{
+		font-family: "Abel", sans-serif;
+		font-weight:500;
+		font-size:16px;
+		color:#A0F4BE;
+		text-decoration:none;
 		margin-left:20px;
 		padding: 9px 25px;
 		background-color: rgba(0,136,169,1);
@@ -44,6 +49,6 @@
 		cursor: pointer;
 		transition: all 0.3s ease 0s;
 	}
-	button:hover{
+	.cart:hover{
 		background-color: rgba(0,136,169,0.8);
 	}
