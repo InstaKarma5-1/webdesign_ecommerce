@@ -10,8 +10,7 @@
 <body>
     
     
-    <p style="text-align: center; font-family: 'Abel', sans-serif; font-size: 25px; 
-    "><strong>LOGIN</strong></p>
+    <p style="text-align: center; font-family: 'Abel', sans-serif; font-size: 25px;"><strong>LOGIN</strong></p>
     
     <br><br>
 
@@ -40,12 +39,14 @@
         
     <p style="text-align: center; font-family: 'Abel', sans-serif; font-size: 25px; 
     ">Don't have an account?<br>
-    Sign up <u><a href="sign up.html">Here</a></u>.</p>
+    Sign up <u><a href="sign up.php">Here</a></u>.</p>
 
     <?php
 
-        $name = $_POST["name"];
-        echo $name;
+        $emailail = $_POST["MAIL"MAIL"];
+        $pswd = $_POST["PASSWORD"];
+        echo $EMAILmailail;
+        echo $pswd;
 
     ?>
 </body>

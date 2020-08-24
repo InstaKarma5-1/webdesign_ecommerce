@@ -13,5 +13,6 @@
         <div class="search_bar">
             <input id="main_search" name="Search" type="text" placeholder="Searching for games?">
         </div>
+        <?php include "footer.html"; ?>
     </body>
 </html>
