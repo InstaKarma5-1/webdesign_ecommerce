@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
 *{
-    cursor: url("../Icons/circular_cursor_1.svg"), auto;
+    cursor: url("../Icons/circular_cursor_1.svg") 25 25, auto;
 }
 
 body{
     background-color: #191D21;
+    color: #A3F7BF;
+    font-family: 'Abel', sans-serif;
 }
-
 
 .search_bar{
     width: 50%;
@@ -15,8 +16,19 @@ body{
     margin-top: 20vh;
     padding: 10px;
     background: #A3F7BF;
-    box-shadow: 0px 4px 116px #29A19C;
     border-radius: 223px;
+    -webkit-animation: glow 2s ease-in-out infinite alternate;
+    -moz-animation: glow 2s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+        box-shadow: 0 0 60px 10px #29A19C;
+    }
+    to {
+        box-shadow: 0 0 60px 10px #39b3ae, 0 0 80px 10px#29A19C;
+    }
 }
 
 #main_search{
@@ -25,6 +37,92 @@ body{
     text-align: center;
     background: none;
     font-size: 40px;
-    font-family: 'Abel', sans-serif;
     outline: none;
+}
+
+.slideshow-container {
+    margin: 100px auto 0px auto;
+    max-width: 1000px;
+    position: relative;
+}
+
+.images{
+    display: none;
+}
+
+.bar{
+    height: 15px;
+    width: 75px;
+    margin: 0 10px;
+    background-color: #435055;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active{
+    background-color: #A3F7BF;
+    box-shadow: 0px 0px 25px #29A19C;
+}
+
+.bar:hover{
+    background-color: #5f916f;
+}
+
+.fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+#title{
+    margin-top: 100px;
+    text-align: center; 
+    font-size: 35px; 
+}
+
+.catalogue{
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.game {
+    position: relative;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+}
+
+.links{
+    transition: text-shadow 0.6s ease;
+    font-size: 27px;
+    position: relative;
+}
+
+.links:hover{
+    text-shadow: 0 0 30px #A3F7BF, 0 0 50px #A3F7BF;
+}
+
+.image-links{
+    transition: box-shadow 0.6s ease;
+}
+
+.image-links:hover{
+    box-shadow: 0 0 20px #A3F7BF;
+}
+
+#upcoming-games{
+    margin: auto auto 150px auto;
 }
