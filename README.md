@@ -6,13 +6,20 @@ Change Logs:
 
 
 <h3>0.2</h3>
-- Modified index.html, .php, .css and added index.js
-- Added Slideshow, Best Sellers and Upcoming games
+- Modified index.html, .php, .css and added index.js <br>
+- Added Slideshow, Best Sellers and Upcoming games <br>
 - Changed search box animation
 - Slideshow:
-    - Changes every 7 secs
-    - the bar at the bottom acts as a selector
-    - supports hover anims :star: 
+    <ul>
+    <li>Changes every 7 secs</li>
+    <li>The bar at the bottom acts as a selector</li>
+    <li>Supports hover anims :star: </li>
+    </ul>
+
 - Best Sellers and Upcoming games
-    - Both use the same style
-    - Added their respective images (larger than the shopping-cart variant) into images/index with a x_large suffix.
+    <ul>
+    <li>Both use the same style</li>
+    <li>TAdded their respective images (larger than the shopping-cart variant) into images/index </li>
+    <li>These images have a x_large suffix.</li>
+    </ul>
+
