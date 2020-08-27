@@ -12,9 +12,11 @@
     <body>
         <?php include "navbar.html"; ?>
 
-        <h1>The email already exists.</h1>
-        <a href="index.php">Bring me back to the store</a>
-
+        <div id="error-message">
+            <h1>The email already exists.</h1>
+            <a href="sign-up.php" id="signup-link">Back to Sign Up</a>
+        </div>
+        
         <?php include "footer.html"; ?>
     </body>
 </html>

@@ -1,11 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
-*{
+* {
     cursor: url("../Icons/cursor32.png") 7 7, auto;
 }
 
-body{
+body {
+    margin: 0px;
     background-color: #191D21;
     color: #A3F7BF;
     font-family: 'Abel', sans-serif;
+}
+
+#error-message {
+    text-align: center;
+    margin: 10vh 10vh;
+}
+
+#signup-link {  
+    transition: text-shadow 0.6s ease;
+    font-size: 32px;
+}
+
+#signup-link:hover {
+    text-shadow: 0 0 30px #A3F7BF;
 }

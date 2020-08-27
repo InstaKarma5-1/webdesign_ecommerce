@@ -17,18 +17,6 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    // $email = test_input($_POST["email"]);
-    // if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    //     $emailErr = "Invalid email format";
-    // }
-    
-    // $sql = "SELECT email FROM user WHERE email = $email";
-    
-    // if ($email == $conn->query($sql)) {
-    //     echo "The email already exists.";
-    //     return false;
-    // }
-
     $sql="SELECT * FROM user WHERE email = '$email';";
     $res = mysqli_query($conn, $sql);
     if (mysqli_num_rows($res) > 0) { 
@@ -37,13 +25,19 @@
         {
             echo '
             <script type="text/javascript">
-                window.location = "../error.php";
+                alert("Email has been taken! Please use another email or click \"Forget Password\"");
+                window.location = "../sign-up.php";
             </script>
             ';
         }
     }
     else{
-        echo "*$!?!* ok lahhh" . "<br>"; 
+        echo '
+        <script type="text/javascript">
+            alert("Account registration successful!");
+            window.location = "../login.php";
+        </script>
+        ';
         $valid = true;
     }
 
@@ -58,10 +52,6 @@
         echo "Error: " . $sql . "<br>" . $conn->error;
         }
     }
-    
-
-
-    
 
     $conn->close();
 ?>
