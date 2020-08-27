@@ -7,6 +7,7 @@
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <link rel="stylesheet" type="text/css" href="css/navbar.css">
         <link rel="stylesheet" type="text/css" href="css/footer.css">
+        <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet"> 
     </head>
 
     <body>
