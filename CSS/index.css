@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
 *{
-    cursor: url("../Icons/circular_cursor_1.svg") 25 25, auto;
+    cursor: url("../Icons/cursor32.png") 7 7, crosshair;
 }
 
 body{
@@ -38,6 +38,7 @@ body{
     background: none;
     font-size: 40px;
     outline: none;
+    font-family: 'Abel', sans-serif;
 }
 
 .slideshow-container {

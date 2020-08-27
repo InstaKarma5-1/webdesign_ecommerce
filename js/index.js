@@ -10,8 +10,6 @@ function currentSlide(n) {
 
 //When user clicks on bar
 function showSlides(n) {
-    console.log("Length of slides is " + slides.length);
-    console.log("Length of bars is " + bar.length);
     var i;
     //Make slides invisible
     for (i = 0; i < slides.length; i++) {
