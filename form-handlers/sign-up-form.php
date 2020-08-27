@@ -35,8 +35,11 @@
         $row = mysqli_fetch_assoc($res);    
         if($email==$row['email']) 
         {
-            echo "Email already exists";
-            exit;
+            echo '
+            <script type="text/javascript">
+                window.location = "../error.php";
+            </script>
+            ';
         }
     }
     else{

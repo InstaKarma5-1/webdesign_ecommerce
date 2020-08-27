@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+*{
+    cursor: url("../Icons/circular_cursor_1.svg") 25 25, auto;
+}
+
+body{
+    background-color: #191D21;
+    color: #A3F7BF;
+    font-family: 'Abel', sans-serif;
+}
