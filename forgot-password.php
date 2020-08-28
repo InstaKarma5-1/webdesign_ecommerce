@@ -14,23 +14,24 @@
         
         <div id="form_box">
 
-            <form action="forgot-password.php" method="post" id="email-form">
+            <form action="validate-email.php" method="post" id="email-form">
                 <label for="email">Please enter your email:</label><br>
                 <input id="email" class="input_field" name="email" type="email" size="31" required>
                 <input type="submit">
             </form>
-
-            <p class="hidden" id="sec-question"></p>
-            <label for="sec-answer" class="hidden">ANSWER</label><br>
-            <textarea class="text_area hidden" id="sec-answer" name="sec-answer" 
-            placeholder="Please input the answer to your question" cols="30" rows="5" required></textarea>
-
-            <p style="text-align: center; margin: 0px;" class="hidden"><a id="reset-link" href="#">Reset Password</a></p>
         </div>
 
-        <!-- 1. Enter email, check if email exists
-             2. Change Password, Confirm Change Password
-             3. UPDATE passwd in SQL-->
+        <!-- 
+            User input email
+            Check if email valid
+            Pass to validateEmail.php
+            If valid, we return questions in string, no redirect, else error
+            User answer question
+            Pass to validateAnswer.php
+            If valid print password in string, no redirect, else error
+
+            https://stackoverflow.com/questions/16127142/modify-html-attribute-with-php/16139844
+        -->
         
         <?php include "footer.html"; ?>
     </body>
