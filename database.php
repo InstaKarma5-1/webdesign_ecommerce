@@ -44,6 +44,21 @@ if ($conn->query($sql) === TRUE) {
     echo "Error creating table: " . $conn->error;
 }
 
+$sql = "CREATE TABLE security_question (
+  userId INT(6) UNSIGNED AUTO_INCREMENT,
+  question VARCHAR(255) NOT NULL,
+  answer VARCHAR(255) NOT NULL,
+  CONSTRAINT
+  FOREIGN KEY (userId) REFERENCES user(userId)
+  ON UPDATE CASCADE
+  ON DELETE CASCADE
+  )";
+
+if ($conn->query($sql) === TRUE) {
+  echo "Table 'security_question' created successfully";
+} else {
+  echo "Error creating table: " . $conn->error;
+}
+
 $conn->close();
 ?>
-

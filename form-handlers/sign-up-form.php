@@ -3,6 +3,8 @@
     $userPassword = $_POST["password"];
     $confirmpassword = $_POST["confirm-password"];
     $phone = $_POST["phone"];
+    $securityQuestion = $_POST["sec-question"];
+    $securityAns = $_POST["sec-answer"];
 
     $servername = "localhost";
     $username = "root";
@@ -47,9 +49,18 @@
         VALUES ('$email', '$userPassword', '$phone')";
     
         if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
+            echo "User account created successfully";
         } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+
+        $sql = "INSERT INTO security_question (question, answer)
+        VALUES ('$securityQuestion', '$securityAns')";
+        
+        if ($conn->query($sql) === TRUE) {
+            echo "Security question saved successfully";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
         }
     }
 

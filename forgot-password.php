@@ -13,9 +13,19 @@
         <?php include "navbar.html"; ?>
         
         <div id="form_box">
-            <label for="email">Please enter your email:</label><br>
-            <input id="email" class="input_field" name="email" type="email" size="31" required>
-            <p style="text-align: center; margin: 0px;"><a id="reset-link" href="#" onclick="">Reset Password</a></p>
+
+            <form action="forgot-password.php" method="post" id="email-form">
+                <label for="email">Please enter your email:</label><br>
+                <input id="email" class="input_field" name="email" type="email" size="31" required>
+                <input type="submit">
+            </form>
+
+            <p class="hidden" id="sec-question"></p>
+            <label for="sec-answer" class="hidden">ANSWER</label><br>
+            <textarea class="text_area hidden" id="sec-answer" name="sec-answer" 
+            placeholder="Please input the answer to your question" cols="30" rows="5" required></textarea>
+
+            <p style="text-align: center; margin: 0px;" class="hidden"><a id="reset-link" href="#">Reset Password</a></p>
         </div>
 
         <!-- 1. Enter email, check if email exists
