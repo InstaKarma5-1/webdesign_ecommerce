@@ -1,7 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+*{
+    cursor: url("../Icons/cursor32.png") 7 7, auto;
+}
+
+
 body {
+    font-family: 'Abel', sans-serif;
+    margin: 0px;
+    padding: 0% 25% 0% 25%;
     background-color: #191D21;
     color: #A3F7BF;
-    padding: 0% 25% 0% 25%;
 }
 
 #shopping-cart-title {
