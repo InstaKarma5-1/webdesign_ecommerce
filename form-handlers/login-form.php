@@ -1,4 +1,7 @@
 <?php
+//linke starto
+session_start();
+
     $email = $_POST["email"];
     $userPassword = $_POST["password"];
 
@@ -47,10 +50,11 @@
         //Redirect them to a session 
         echo '
         <script type="text/javascript">
-            alert("ter brue-toofff devaisase eez konnektad suksesfulli");
+            alert("ter brue-toofff devaisase eez konnekte-ted suksesfulli");
             window.location = "../index.php";
         </script>
         ';
+        $_SESSION["username"] = strstr($email, '@', true);
     }
 
     $conn->close();

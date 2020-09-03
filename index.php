@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -11,7 +14,28 @@
     </head>
 
     <body>
-        <?php include "navbar.html"; ?>
+        <?php 
+            include "navbar.html";
+
+            if (isset( $_SESSION["username"])) {
+                // Grab user data from the database using the user_id
+                // Let them access the "logged in only" pages
+                echo $_SESSION["username"];
+                echo '
+                <script>
+                    var signup = document.getElementById("sign-up");
+                    var login = document.getElementById("login");
+                ';
+                echo "signup.textContent = 'WELCOME, " . $_SESSION['username'] . "';";
+                echo '
+                    signup.href = "#";
+                    login.textContent = "LOGOUT";
+                    login.href = "logout.php"; 
+                    
+                </script>
+                ';
+            }
+        ?>
 
         <div class="search_bar">
             <input id="main_search" name="Search" type="text" placeholder="Searching for games?">
@@ -65,6 +89,58 @@
             <div class="game">
                 <a href="#half-life-3"><img class="image-links" src="images/index/half-life3_large.png" alt="Half-Life 3"></a><br>
                 <a href="#half-life-3" class="links">Half-Life 3</a>
+            </div>
+            <div class="game">
+                <a href="#kirby"><img class="image-links" src="images/index/kirby_large.png" alt="Kirby"></a><br>
+                <a href="#kirby" class="links">Kirby</a>
+            </div>
+        </div>
+
+        <?php include "footer.html"; ?>
+                <a href="#gtav_vatician_city"><img class="image-links" src="images/index/gtav-vatican-city_large.png" alt="GTA V: Vatician City"></a><br>
+                <a href="#gtav_vatician_city" class="links">GTA V: Vatician City</a>
+            </div>
+            <div class="game">
+                <a href="#half-life-3"><img class="image-links" src="images/index/half-life3_large.png" alt="Half-Life 3"></a><br>
+                <a href="#half-life-3" class="links">Half-Life 3</a>
+            </div>
+            <div class="game">
+                <a href="#kirby"><img class="image-links" src="images/index/kirby_large.png" alt="Kirby"></a><br>
+                <a href="#kirby" class="links">Kirby</a>
+            </div>
+        </div>
+
+        <?php include "footer.html"; ?>
+                <a href="#gtav_vatician_city"><img class="image-links" src="images/index/gtav-vatican-city_large.png" alt="GTA V: Vatician City"></a><br>
+                <a href="#gtav_vatician_city" class="links">GTA V: Vatician City</a>
+            </div>
+            <div class="game">
+                <a href="#half-life-3"><img class="image-links" src="images/index/half-life3_large.png" alt="Half-Life 3"></a><br>
+                <a href="#half-life-3" class="links">Half-Life 3</a>
+            </div>
+            <div class="game">
+                <a href="#kirby"><img class="image-links" src="images/index/kirby_large.png" alt="Kirby"></a><br>
+            </div>
+            <div class="game">
+                <a href="#kirby"><img class="image-links" src="images/index/kirby_large.png" alt="Kirby"></a><br>
+            </div>
+            <div class="game">
+                <a href="#kirby"><img class="image-links" src="images/index/kirby_large.png" alt="Kirby"></a><br>
+            </div>
+            <div class="game">
+                <a href="#kirby"><img class="image-links" src="images/index/kirby_large.png" alt="Kirby"></a><br>
+            </div>
+            <div class="game">
+                <a href="#kirby"><img class="image-links" src="images/index/kirby_large.png" alt="Kirby"></a><br>
+            </div>
+            <div class="game">
+                <a href="#kirby"><img class="image-links" src="images/index/kirby_large.png" alt="Kirby"></a><br>
+            </div>
+            <div class="game">
+                <a href="#kirby"><img class="image-links" src="images/index/kirby_large.png" alt="Kirby"></a><br>
+            </div>
+            <div class="game">
+                <a href="#kirby"><img class="image-links" src="images/index/kirby_large.png" alt="Kirby"></a><br>
             </div>
             <div class="game">
                 <a href="#kirby"><img class="image-links" src="images/index/kirby_large.png" alt="Kirby"></a><br>
