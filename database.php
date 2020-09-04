@@ -78,7 +78,7 @@ gameId INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 gameName VARCHAR(255) NOT NULL,
 gameDesc TEXT NOT NULL,
 gamePic VARCHAR(255) NOT NULL,
-gamePrice DOUBLE NOT NULL
+gamePrice_RM DOUBLE NOT NULL
 )";
 
 if ($conn->query($sql) === TRUE) {
@@ -86,6 +86,36 @@ echo "Table 'games' created successfully<br>";
 } else {
 echo "Error creating table: " . $conn->error;
 }
+
+// Insert games data
+$sql = "INSERT INTO games (gameName, gameDesc, gamePic, gamePrice_RM) VALUES 
+('ATRI -My Dear Moments-', '\"As the world sank, I found you.\" In the near future, a sudden and unexplained sea rise
+				has left much of human civilization underwater. In a little town slowly being enveloped by 
+				the ocean, an unforgettable summer is about to begin for a boy and a mysterious robot girl...','images/products/atri.png', 36.85),
+
+('Nekopara','Patisserie \"La Soleil\", run by Kashou Minaduki, is flourishing thanks to the help of 
+two catgirls: Maple, full of pride and a little on the haughty side, and Cinnamon, an impulsive daydreamer.','images/products/nekopara.png', 23.00),
+
+('Sword Art Online: Alicization Lycoris','Kirito awakens in a completely unknown virtual world, but something about it feels a bit familiar...\n
+Set in Underworld, an expansive world introduced in the SWORD ART ONLINE anime, Kirito sets out on adventure in the series\' latest RPG!','images/products/sword-art-online.png', 159.00),
+
+('Dead by Daylight','Dead by Daylight is a multiplayer (4vs1) horror game where one player takes on the role of the savage Killer, and the 
+other four players play as Survivors, trying to escape the Killer and avoid being caught and killed.','images/products/dead-by-deadlight.png', 38.00),
+
+('Minecraft','Minecraft is a sandbox video game developed by Mojang Studios...\n
+In Minecraft, players explore a blocky, procedurally-generated 3D world with infinite 
+terrain, and may discover and extract raw materials, craft tools and items, and build 
+structures or earthworks.','images/products/minecraft.png', 111.83),
+
+('Fall Guys: Ultimate Knockout','Fall Guys is a massively multiplayer party game with up to 60 players online in a free-for-all struggle
+ through round after round of escalating chaos until one victor remains!','images/products/fall-guys.png', 39.00)
+";
+  
+  if ($conn->query($sql) === TRUE) {
+  echo "Game information inserted successfully<br>";
+  } else {
+  echo "Error inserting game information: " . $conn->error;
+  }
 
 $conn->close();
 ?>
