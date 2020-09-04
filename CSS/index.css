@@ -125,14 +125,14 @@ body {
 }
 
 .image-links {
-    width: 352px;
-    height: 441px;
+    max-width: 352px;
+    max-height: 441px;
     transition: box-shadow 0.6s ease;
 }
 
 .image-links, .slideshow {
-    width: 1280px;
-    height: 480px;
+    max-width: 1280px;
+    max-height: 480px;
     transition: box-shadow 0.6s ease;
 }
 
@@ -144,29 +144,34 @@ body {
     margin: auto auto 150px auto;
 }
 
-.date_overlay {  
+.date-overlay{
     position: absolute;
-    bottom: 100%;
-    left: 0;
-    right: 0;
-    background-color: rgba(10, 10, 10, 0.4);
+    background-color: rgba(0,0,0,0.7);
     overflow: hidden;
-    width: 100%;
-    height: 0;
-    transition: .5s ease;
+    transition: 0.5s ease;
+    width: 352px;
+    height: 0px;
+    top: 10px;
+    left: 10px;
+    right: 0px;
 }
 
-.upcoming:hover .date_overlay {
-    bottom: 0;
-    height: 100%;
-}
-
-.release_date {
-    white-space: nowrap;
+.release-date{
+    white-space: nowrap; 
     position: absolute;
     overflow: hidden;
     top: 50%;
     left: 50%;
+    font-size: 35px;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
+}
+
+.upcoming {
+    max-width: 352px;
+    max-height: 441px;
+}
+
+.upcoming:hover .date-overlay{
+    height: 441px;
 }

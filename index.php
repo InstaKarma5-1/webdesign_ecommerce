@@ -83,25 +83,31 @@ session_start();
         <p id="title"><b>UPCOMING GAMES</b></p>
         <div class="catalogue" id="upcoming-games">
             <div class="game">
-                <a href=""><img class="image-links upcoming" src="images/index/gta-vatican-city.png" alt="GTA V: Vatician City"></a>
-                <div class="date_overlay">
-                    <div class="release_date">Coming Spring 2021</div>
-                </div><br>
-                <a href="" class="links">GTA V: Vatician City</a>
+                <div class="upcoming">
+                    <img src="images/index/gta-vatican-city.png" alt="GTA V: Vatician City">
+                    <div class="date-overlay">
+                        <div class="release-date">Coming Spring 2021</div>
+                    </div>
+                </div>
+                <p class="links">GTA V: Vatician City</p>
             </div>
             <div class="game">
-                <a href=""><img class="image-links upcoming" src="images/index/half-life-3.png" alt="Half-Life 3"></a>
-                <div class="date_overlay">
-                    <div class="release_date">Coming... Maybe never?</div>
-                </div><br>
-                <a href="" class="links">Half-Life 3</a>
+                <div href="#"  class="upcoming">
+                    <img src="images/index/half-life-3.png" alt="Half-Life 3">
+                    <div class="date-overlay">
+                        <div class="release-date">Coming... Maybe never?</div>
+                    </div>
+                </div>
+                <p class="links">Half-Life 3</p>
             </div>
             <div class="game">
-                <a href=""><img class="image-links upcoming" src="images/index/kirby.png" alt="Kirby"></a>
-                <div class="date_overlay">
-                    <div class="release_date">Coming 20.12.2020</div>
-                </div><br>
-                <a href="" class="links">Kirby</a>
+                <div href="#"  class="upcoming">
+                    <img src="images/index/kirby.png" alt="Kirby">
+                    <div class="date-overlay">
+                        <div class="release-date">Coming 20.12.2020</div>
+                    </div>
+                </div>
+                <p class="links">Kirby</p>
             </div>
         </div>
 

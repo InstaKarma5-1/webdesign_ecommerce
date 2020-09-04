@@ -40,8 +40,17 @@ body {
 	font-family: "Abel", sans-serif;
 	padding-left:12.5%;
 }
+
+.row {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 85%;
+}
+
 .column{
-	float:left;
 	width:28%;
 	text-align:center;
 }
