@@ -10,7 +10,10 @@
 
 </head>
 <body>
-    <p id="title"><u>SIGN UP</u></p>
+
+    <?php include "navbar.php"; ?>
+
+    <p id="title">SIGN UP</p>
    
    <br>
 
@@ -62,7 +65,7 @@
         </form>  
     </div>
         
-
+    <?php include "footer.html"; ?>
     
 </body>
 </html>

@@ -10,29 +10,21 @@
     </head>
 
     <body>
-        <?php include "navbar.html"; ?>
+        <?php include "navbar.php"; ?>
         
         <div id="form_box">
 
             <form action="validate-email.php" method="post" id="email-form">
                 <label for="email">Please enter your email:</label><br>
                 <input id="email" class="input_field" name="email" type="email" size="31" required>
-                <input type="submit">
+                <p style="text-align: center;">
+                    <button id="SubmitBacon" type="submit" name="Submit">
+                        <img src="Icons/SubmitBacon.png" width="230" height="110" alt="submit" />
+                    </button>
+                </p>
             </form>
         </div>
 
-        <!-- 
-            User input email
-            Check if email valid
-            Pass to validateEmail.php
-            If valid, we return questions in string, no redirect, else error
-            User answer question
-            Pass to validateAnswer.php
-            If valid print password in string, no redirect, else error
-
-            https://stackoverflow.com/questions/16127142/modify-html-attribute-with-php/16139844
-        -->
-        
         <?php include "footer.html"; ?>
     </body>
 </html>

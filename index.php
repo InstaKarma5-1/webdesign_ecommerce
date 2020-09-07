@@ -15,26 +15,26 @@ session_start();
 
     <body>
         <?php 
-            include "navbar.html";
+            include "navbar.php";
 
-            if (isset( $_SESSION["username"])) {
-                // Grab user data from the database using the user_id
-                // Let them access the "logged in only" pages
-                echo $_SESSION["username"];
-                echo '
-                <script>
-                    var signup = document.getElementById("sign-up");
-                    var login = document.getElementById("login");
-                ';
-                echo "signup.textContent = 'WELCOME, " . $_SESSION['username'] . "';";
-                echo '
-                    signup.href = "#";
-                    login.textContent = "LOGOUT";
-                    login.href = "logout.php"; 
+            // if (isset( $_SESSION["username"])) {
+            //     // Grab user data from the database using the user_id
+            //     // Let them access the "logged in only" pages
+            //     echo '
+            //     <script>
+            //         var signup = document.getElementById("sign-up");
+            //         var login = document.getElementById("login");
+            //     ';
+            //     echo "signup.textContent = 'WELCOME, " . $_SESSION['username'] . "';";
+            //     echo '
+            //         signup.href = "#";
+            //         login.textContent = "LOGOUT";
+            //         login.href = "logout.php";
                     
-                </script>
-                ';
-            }
+            //     </script>
+            //     ';
+            // }
+
         ?>
 
         <div class="search_bar">
@@ -43,15 +43,15 @@ session_start();
 
         <div class="slideshow-container">
             <div class="images fade">
-                <a href="#atri-game"><img class="image-links slideshow" src="images/index/atri-slideshow.png" style="width:100%;"></a>
+                <a href="product.php?gameId=1"><img class="image-links slideshow" src="images/index/atri-slideshow.png" style="width:100%;"></a>
             </div>
 
             <div class="images fade">
-                <a href="#nekopara-game"><img class="image-links slideshow" src="images/index/nekopara-slideshow.png" style="width:100%;"></a>
+                <a href="product.php?gameId=2"><img class="image-links slideshow" src="images/index/nekopara-slideshow.png" style="width:100%;"></a>
             </div>
 
             <div class="images fade">
-                <a href="#sao-game"><img class="image-links slideshow" src="images/index/sao-slideshow.png" style="width:100%;"></a>
+                <a href="product.php?gameId=3"><img class="image-links slideshow" src="images/index/sao-slideshow.png" style="width:100%;"></a>
             </div>
             <br>
 
@@ -67,16 +67,16 @@ session_start();
         <p id="title"><b>BEST SELLERS</b></p>
         <div class="catalogue" id="best-seller">
             <div class="game">
-                <a href="#dead_by_daylight"><img class="image-links" src="images/products/dead-by-daylight.png" alt="Dead by Daylight"></a><br>
-                <a href="#dead_by_daylight" class="links">Dead by Daylight</a>
+                <a href="product.php?gameId=4"><img class="image-links" src="images/products/dead-by-daylight.png" alt="Dead by Daylight"></a><br>
+                <a href="product.php?gameId=4" class="links">Dead by Daylight</a>
             </div>
             <div class="game">
-                <a href="#minecraft"><img class="image-links" src="images/products/minecraft.png" alt="Minecraft"></a><br>
-                <a href="#minecraft" class="links">Minecraft</a>
+                <a href="product.php?gameId=5"><img class="image-links" src="images/products/minecraft.png" alt="Minecraft"></a><br>
+                <a href="product.php?gameId=5" class="links">Minecraft</a>
             </div>
             <div class="game">
-                <a href="#fall_guys"><img class="image-links" src="images/products/fall-guys.png" alt="Fall Guys"></a><br>
-                <a href="#fall_guys" class="links">Fall Guys: Ultimate Knockout</a>
+                <a href="product.php?gameId=6"><img class="image-links" src="images/products/fall-guys.png" alt="Fall Guys"></a><br>
+                <a href="product.php?gameId=6" class="links">Fall Guys: Ultimate Knockout</a>
             </div>
         </div>
 

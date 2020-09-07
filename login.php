@@ -9,8 +9,9 @@
 </head>
 <body>
     
+    <?php include "navbar.php"; ?>
     
-    <p style="text-align: center; font-family: 'Abel', sans-serif; font-size: 25px;"><strong>LOGIN</strong></p>
+    <p id="title">LOGIN</p>
     
     <br><br>
 
@@ -39,15 +40,9 @@
         
     <p style="text-align: center; font-family: 'Abel', sans-serif; font-size: 25px; 
     ">Don't have an account?<br>
-    Sign up <u><a href="sign up.php">Here</a></u>.</p>
+    Sign up <a href="sign-up.php" id="here" >here</a>.</p>
 
-    <?php
+    <?php include "footer.html"; ?>
 
-        $email = $_POST["email"];
-        $pswd = $_POST["password"];
-        echo $email;
-        echo $pswd;
-
-    ?>
 </body>
 </html>

@@ -11,6 +11,23 @@ body{
     font-family: 'Abel', sans-serif;
 }
 
+#title{
+    text-align: center; 
+    font-size: 35px; 
+    -webkit-animation: titleGlow 1.5s ease-in-out infinite alternate;
+    -moz-animation: titleGlow 1.5s ease-in-out infinite alternate;
+    animation: titleGlow 1.5s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes titleGlow {
+    from {
+      text-shadow: 0 0 10px #A3F7BF, 0 0 20px #A3F7BF, 0 0 30px #A3F7BF, 0 0 40px #29A19C ;
+    }
+    to {
+      text-shadow: 0 0 20px #29A19C, 0 0 30px #29A19C, 0 0 40px #29A19C ;
+    }
+}
+
 #form_box{
     width: 450px;
     position: relative;
@@ -19,7 +36,7 @@ body{
     font-family: 'Abel', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 23px;
+    font-size: 25px;
     line-height: 40px;
 }
 
@@ -51,7 +68,7 @@ body{
     text-decoration: none;
     transition: text-shadow 0.6s ease;
     color: #A3F7BF;
-    font-size: 20px;
+    font-size: 23px;
     margin-top: 5px;
 }
 
@@ -66,3 +83,19 @@ body{
 #forget-password-link:active {
     text-shadow: 0 0 30px #A3F7BF;
 }
+
+#here{ 
+    font-size: 25px;
+    text-decoration: none;
+    color:#A3F7BF;     
+    transition: text-shadow 0.6s ease;
+}
+
+#here:visited {
+    color:#A3F7BF;
+} 
+
+#here:hover {
+    color:#A3F7BF;
+    text-shadow: 0 0 6px #A3F7BF, 0 0 30px #A3F7BF, 0 0 50px #A3F7BF;
+} 

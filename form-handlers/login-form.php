@@ -50,7 +50,7 @@ session_start();
         //Redirect them to a session 
         echo '
         <script type="text/javascript">
-            alert("ter brue-toofff devaisase eez konnekte-ted suksesfulli");
+            alert("You have successfully logged in.");
             window.location = "../index.php";
         </script>
         ';

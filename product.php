@@ -1,4 +1,5 @@
 <?php
+	session_start();
 
 	$servername = "localhost";
 	$username = "root";
@@ -11,10 +12,22 @@
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
 	}
+
+	$_SESSION["gameId"] = $_GET["gameId"];
+	$gameId = $_SESSION["gameId"];
 	
+	if (empty($gameId)) {
+		echo'
+		<script>
+			alert("The product is not found.");
+			window.location = "index.php";
+		</script>
+		';
+	}
+
 	//Getting game information
 	//Game Name
-	$sql="SELECT gameName, gameDesc, gamePic, gamePrice_RM FROM games WHERE gameId = 2;";
+	$sql="SELECT gameName, gameDesc, gamePic, gamePrice_RM FROM games WHERE gameId = $gameId;";
 	$res = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_assoc($res);
 	$gameName = $row['gameName'];
@@ -27,14 +40,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="../css/productinfo.css">
-		<link rel="stylesheet" type="text/css" href="../css/navbar.css">
-        <link rel="stylesheet" type="text/css" href="../css/footer.css">
+		<link rel="stylesheet" type="text/css" href="css/product.css">
+		<link rel="stylesheet" type="text/css" href="css/navbar.css">
+        <link rel="stylesheet" type="text/css" href="css/footer.css">
         <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
 	</head>
 	<body>
 
-		<?php include "../navbar.html"; ?>
+		<?php include "navbar.php"; ?>
 
 		<div class="p_info_top">
 			<div class="p_info_pic">
@@ -48,7 +61,7 @@
 					<h3>TOTAL PRICE:</h3>
 					<h2>RM <?php echo $gamePrice_RM; ?></h2>
 				</div>
-				<img src="../icons/addToCartC.png" onclick="helloCannot()" style="width:18%; height:auto;">
+				<img src="icons/addToCartC.png" onclick="helloCannot()" style="width:18%; height:auto;">
 			</div>
 		</div>
 		
@@ -61,17 +74,17 @@
 			<br>
 			<div class="row">
 				<div class="column">
-					<img src ="../images/products/dead-by-daylight.png" style="width:50%; height:auto;" alt="logo">
+					<img src ="images/products/dead-by-daylight.png" style="width:50%; height:auto;" alt="logo">
 					<h2>Dead by Daylight</h2>
 				</div>
 				
 				<div class="column">
-					<img src ="../images/products/minecraft.png" style="width:50%; height:auto;" alt="logo">
+					<img src ="images/products/minecraft.png" style="width:50%; height:auto;" alt="logo">
 					<h2>Minecraft</h2>
 				</div>
 				
 				<div class="column">
-					<img src ="../images/products/fall-guys.png" style="width:50%; height:auto;" alt="logo">
+					<img src ="images/products/fall-guys.png" style="width:50%; height:auto;" alt="logo">
 					<h2>Fall Guys</h2>
 				</div>
 			</div>
@@ -79,9 +92,7 @@
 
 		<br>
 		
-		<?php include "../footer.html"; ?>
-
-		<script src="../js/productinfo.js"></script>
+		<?php include "footer.html"; ?>
 
 	</body>
 </html>

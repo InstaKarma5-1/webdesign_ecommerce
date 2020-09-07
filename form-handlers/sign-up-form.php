@@ -1,11 +1,4 @@
 <?php
-    $email = $_POST["email"];
-    $userPassword = $_POST["password"];
-    $confirmpassword = $_POST["confirm-password"];
-    $phone = $_POST["phone"];
-    $securityQuestion = $_POST["sec-question"];
-    $securityAns = $_POST["sec-answer"];
-
     $servername = "localhost";
     $username = "root";
     $dbPassword = "";
@@ -18,6 +11,12 @@
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
+    
+    $phone = $_POST["phone"];
+    $email = mysqli_real_escape_string($conn, $_POST["email"]);
+    $userPassword = mysqli_real_escape_string($conn, $_POST["password"]);
+    $securityQuestion = mysqli_real_escape_string($conn, $_POST["sec-question"]);
+    $securityAns = mysqli_real_escape_string($conn, $_POST["sec-answer"]);
 
     $sql="SELECT * FROM user WHERE email = '$email';";
     $res = mysqli_query($conn, $sql);

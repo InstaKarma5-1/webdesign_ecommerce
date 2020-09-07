@@ -64,6 +64,13 @@ body {
     line-height: 40px;
 }
 
+#SubmitBacon {
+    text-align: center;
+    border: 0;
+    background: transparent;
+}
+
+
 .input_field {
     width: 434px;
     margin: 10px auto;

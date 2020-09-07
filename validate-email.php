@@ -10,14 +10,14 @@
     </head>
 
     <body>
-        <?php include "navbar.html"; ?>
+        <?php include "navbar.php"; ?>
 
         <div id="form_box">
             <p id="title">SECURITY QUESTION:</p><br>
             
             <!-- printing the question  -->
             <?php
-                $email = $_POST["email"]; 
+                
                 $servername = "localhost";
                 $username = "root";
                 $dbPassword = "";
@@ -30,28 +30,31 @@
                     die("Connection failed: " . $conn->connect_error);
                 }
 
-                $sql="SELECT * FROM user WHERE email = '$email';";
+                $emailDirty = $_POST["email"];
+                $email = mysqli_real_escape_string($conn, $_POST["email"]);
+
+                $sql= "SELECT * FROM user WHERE email = '$email';";
                 $res = mysqli_query($conn, $sql);
                 if (mysqli_num_rows($res) > 0) { 
                     $row = mysqli_fetch_assoc($res);    
-                    if($email==$row['email']) 
+                    if($emailDirty==$row['email']) 
                     {
                         //SQL query for security question
                         $sql = "SELECT s.question
                                 FROM user u, security_question s
-                                WHERE u.userId = s.userId
+                                WHERE s.userId = u.userId
                                 AND u.email = '$email';";
                         $res = mysqli_query($conn, $sql);
                         if (mysqli_num_rows($res) > 0) { 
-                            $row = mysqli_fetch_assoc($res); 
+                            $row = mysqli_fetch_assoc($res);
                             echo $row['question'];
-                            //return $valid = true;
                         }
                     }
                 } else {
                     echo '
                     <script type="text/javascript">
                         alert("Invalid email!");
+                        window.location = "forgot-password.php";
                     </script>
                     ';
                 }
@@ -64,8 +67,12 @@
                 <label for="sec-answer">Answer:</label><br>
                 <textarea class="text_area" id="sec-answer" name="sec-answer" placeholder="Please input the answer to your question" 
                 cols="30" rows="5" required></textarea>
-                <input type="submit" id="submit">
-                <input id="email" class="input_field" name="email" type="email" value="<?php echo "$email"; ?>">
+                <p style="text-align: center;">
+                    <button id="SubmitBacon" type="submit" name="Submit">
+                        <img src="Icons/SubmitBacon.png" width="230" height="110" alt="submit"/>
+                    </button>
+                </p>
+                <input id="email" class="input_field" name="email" type="text" value="<?php echo "$emailDirty"; ?>">
             </form>
             
         </div>
