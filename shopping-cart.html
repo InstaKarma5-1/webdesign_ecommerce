@@ -7,7 +7,6 @@
     <title>Shopping Cart</title>
     <link rel="stylesheet" type="text/css" href="css/shopping-cart.css">
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
-    <script src="js/shopping-cart.js"></script>
 </head>
 
 <body>
@@ -17,12 +16,12 @@
         <img src="images/shopping-cart/atri.png" alt="atri">
         <div class="shopping-cart-item-info">
             <p>ATRI - My Dear Moments -</p>
-            <p>RM 69.96</p>
+            RM <p class="shopping-cart-item-price">69.96</p>
         </div>
         <div class="shopping-cart-item-quantity">
-            <button>-</button>
-            <p>1</p>
-            <button>+</button>
+            <button class="shopping-cart-decrease-button">-</button>
+            <p class="shopping-cart-quantity-value">1</p>
+            <button class="shopping-cart-increase-button">+</button>
         </div>
         <button class="shopping-cart-delete-button">X</button>
     </div>
@@ -33,12 +32,12 @@
         <img src="images/shopping-cart/minecraft.png" alt="minecraft">
         <div class="shopping-cart-item-info">
             <p>Minecraft</p>
-            <p>RM 69.96</p>
+            RM <p class="shopping-cart-item-price">69.96</p>
         </div>
         <div class="shopping-cart-item-quantity">
-            <button>-</button>
-            <p>1</p>
-            <button>+</button>
+            <button class="shopping-cart-decrease-button">-</button>
+            <p class="shopping-cart-quantity-value">1</p>
+            <button class="shopping-cart-increase-button">+</button>
         </div>
         <button class="shopping-cart-delete-button">X</button>
     </div>
@@ -47,10 +46,22 @@
 
     <div id="shopping-cart-total">
         <p>TOTAL PRICE</p>
-        <p>RM 139.92</p>
+        RM <p id="shopping-cart-total-value">0.00</p>
         <img src="buttons/proceed.png" alt="proceed">
     </div>
 
 </body>
 
+<script src="js/shopping-cart.js"></script>
+
 </html>
+
+
+<!-- 
+1. User comes from product.php (else say cart is empty)
+2. check for session variable (gameId)
+3a. If a div with gameId alrd exists -> say item already in cart
+3b. If a div with gameId is absent   -> add a template div and populate with info from database  
+4. When user click on add/decrease button, change the value
+5. when user submits, post data of gameId
+-->
