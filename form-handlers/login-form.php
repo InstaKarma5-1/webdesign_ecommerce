@@ -1,5 +1,4 @@
 <?php
-//linke starto
 session_start();
 
     $email = $_POST["email"];
@@ -25,6 +24,9 @@ session_start();
         if($email==$row['email'] && $userPassword==$row['passwd'])    //Email exists in database AND password matches
         {
             $valid = true;
+            if($row['isAdmin'] == 1){
+                $admin = true;
+            }
         } else {                                                      //Email exists BUT password mismatched
             echo '
             <script type="text/javascript">
@@ -46,15 +48,30 @@ session_start();
     
 
     // After everything is validated
-    if($valid == true){
-        //Redirect them to a session 
-        echo '
-        <script type="text/javascript">
-            alert("You have successfully logged in.");
-            window.location = "../index.php";
-        </script>
-        ';
-        $_SESSION["username"] = strstr($email, '@', true);
+    if($valid == true) {
+
+        if($admin == true){
+            // Redirect admin to admin.php
+            echo'
+            <script type="text/javascript">
+                alert("Welcome Admin");
+                window.location = "../admin.php";
+            </script>';
+            $_SESSION["username"] = strstr($email, '@', true);
+            $_SESSION["email"] = $email;
+        }     
+        else {
+            //Redirect user to index.php
+            echo '
+            <script type="text/javascript">
+                alert("You have successfully logged in.");
+                window.location = "../index.php";
+            </script>
+            ';
+            $_SESSION["username"] = strstr($email, '@', true);
+            $_SESSION["email"] = $email;
+        }
+        
     }
 
     $conn->close();

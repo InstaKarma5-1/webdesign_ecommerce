@@ -11,7 +11,7 @@
 		<div class="link-flex">
 			<a href="sign-up.php" id="sign-up">SIGN UP</a>
 			<a href="login.php" id="login">LOGIN</a>
-			<a href="#" id="cart">CART</a>
+			<a href="shopping-cart.php" id="cart">CART</a>
 		</div>
 
 		</nav>
@@ -19,7 +19,7 @@
 </html>
 
 <?php
-	if (isset( $_SESSION["username"])) {
+	if (isset($_SESSION["username"])) {
 		// Grab user data from the database using the user_id
 		// Let them access the "logged in only" pages
 		echo '

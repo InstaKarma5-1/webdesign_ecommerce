@@ -8,9 +8,12 @@
 body {
     font-family: 'Abel', sans-serif;
     margin: 0px;
-    padding: 0% 25% 0% 25%;
     background-color: #191D21;
     color: #A3F7BF;
+}
+
+#shopping-cart-body {
+    padding: 0% 25% 0% 25%;
 }
 
 #shopping-cart-title {

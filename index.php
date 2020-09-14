@@ -17,24 +17,6 @@ session_start();
         <?php 
             include "navbar.php";
 
-            // if (isset( $_SESSION["username"])) {
-            //     // Grab user data from the database using the user_id
-            //     // Let them access the "logged in only" pages
-            //     echo '
-            //     <script>
-            //         var signup = document.getElementById("sign-up");
-            //         var login = document.getElementById("login");
-            //     ';
-            //     echo "signup.textContent = 'WELCOME, " . $_SESSION['username'] . "';";
-            //     echo '
-            //         signup.href = "#";
-            //         login.textContent = "LOGOUT";
-            //         login.href = "logout.php";
-                    
-            //     </script>
-            //     ';
-            // }
-
         ?>
 
         <div class="search_bar">

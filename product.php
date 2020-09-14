@@ -43,7 +43,8 @@
 		<link rel="stylesheet" type="text/css" href="css/product.css">
 		<link rel="stylesheet" type="text/css" href="css/navbar.css">
         <link rel="stylesheet" type="text/css" href="css/footer.css">
-        <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+		<script src="js/product.js"></script>
 	</head>
 	<body>
 
@@ -61,7 +62,7 @@
 					<h3>TOTAL PRICE:</h3>
 					<h2>RM <?php echo $gamePrice_RM; ?></h2>
 				</div>
-				<img src="icons/addToCartC.png" onclick="helloCannot()" style="width:18%; height:auto;">
+				<img src="icons/addToCartC.png" onclick="addToCart()" style="width:18%; height:auto;">
 			</div>
 		</div>
 		

@@ -4,6 +4,6 @@
     session_unset();
     session_destroy();
 
-    header("Location: index.php");
-
+    echo '<script>alert("You have successfully logged out.");</script>';
+    echo '<script>window.location = "index.php";</script>';
 ?>
