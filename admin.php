@@ -5,7 +5,6 @@
     $username = "root";
     $dbPassword = "";
     $dbname = "bayconegg";
-    $valid = false;
 
     // Create connection
     $conn = new mysqli($servername, $username, $dbPassword, $dbname);
@@ -22,7 +21,7 @@
     if ($_SESSION["email"] != "admin@bayconeggs.com" ) {
         echo '
         <script>
-            alert("UNAUTHORIZED ACCESS DETECTED! DEFENSIVE MANUEVERS ENGAGED! PANIKKK");
+            alert("You do not have access to this page! ⊂(⊙д⊙)つ");
             window.location = "index.php";
         </script>';
     }
@@ -67,8 +66,8 @@
                             <td><?php echo $row["gameDesc"]; ?></td>
                             <td><?php echo $row["gamePic"]; ?></td>
                             <td>RM <?php echo $row["gamePrice_RM"]; ?></td>
-                            <td><a href="edit.php?id=<?php echo $row["gameId"]; ?>">Edit</a></td>
-                            <td><a href="delete.php?id=<?php echo $row["gameId"]; ?>">Delete</a></td>
+                            <td><a href="form-handlers/edit.php?gameid=<?php echo $row["gameId"]; ?>">Edit</a></td>
+                            <td><a href="form-handlers/delete.php?gameid=<?php echo $row["gameId"]; ?>">Delete</a></td>
                         </tr>
                     <?php } while ($row = mysqli_fetch_assoc($res)); ?>
             </tbody>

@@ -1,6 +1,21 @@
 <?php
-session_start();
+    session_start();
+    
+    $servername = "localhost";
+    $username = "root";
+    $dbPassword = "";
+    $dbname = "bayconegg";
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $dbPassword, $dbname);
+    // Check connection
+    if ($conn->connect_error) {
+        echo '<script>alert("First time around? Welcome to 🥓🥚!");</script>';
+        include('database.php');
+        echo '<script>window.location = "index.php";</script>';
+    }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
