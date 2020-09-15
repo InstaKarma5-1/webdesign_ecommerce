@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
-
-*{
-    cursor: url("../Icons/cursor32.png") 7 7, crosshair;
+* {
+    cursor: url("../Icons/cursor32.png") 7 7, auto;
 }
 
-body{
+body {
+    margin: 0px;
     background-color: #191D21;
     color: #A3F7BF;
     font-family: 'Abel', sans-serif;
 }
 
-.search_bar{
+.search_bar {
     width: 50%;
     margin: auto;
     margin-top: 20vh;
@@ -31,7 +31,7 @@ body{
     }
 }
 
-#main_search{
+#main_search {
     width: 100%;
     border: none;
     text-align: center;
@@ -47,11 +47,11 @@ body{
     position: relative;
 }
 
-.images{
+.images {
     display: none;
 }
 
-.bar{
+.bar {
     height: 15px;
     width: 75px;
     margin: 0 10px;
@@ -60,16 +60,16 @@ body{
     transition: background-color 0.6s ease;
 }
 
-.active{
+.active {
     background-color: #A3F7BF;
     box-shadow: 0px 0px 25px #29A19C;
 }
 
-.bar:hover{
+.bar:hover {
     background-color: #5f916f;
 }
 
-.fade{
+.fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 2s;
     animation-name: fade;
@@ -77,22 +77,30 @@ body{
 }
 
 @-webkit-keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
 }
-  
+
 @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
 }
 
-#title{
+#title {
     margin-top: 100px;
-    text-align: center; 
-    font-size: 35px; 
+    text-align: center;
+    font-size: 35px;
 }
 
-.catalogue{
+.catalogue {
     width: 80vw;
     margin: auto;
     display: flex;
@@ -106,24 +114,64 @@ body{
     text-align: center;
 }
 
-.links{
+.links {
     transition: text-shadow 0.6s ease;
     font-size: 27px;
     position: relative;
 }
 
-.links:hover{
+.links:hover {
     text-shadow: 0 0 30px #A3F7BF, 0 0 50px #A3F7BF;
 }
 
-.image-links{
+.image-links {
+    max-width: 352px;
+    max-height: 441px;
     transition: box-shadow 0.6s ease;
 }
 
-.image-links:hover{
+.image-links, .slideshow {
+    max-width: 1280px;
+    max-height: 480px;
+    transition: box-shadow 0.6s ease;
+}
+
+.image-links:hover {
     box-shadow: 0 0 20px #A3F7BF;
 }
 
-#upcoming-games{
+#upcoming-games {
     margin: auto auto 150px auto;
+}
+
+.date-overlay{
+    position: absolute;
+    background-color: rgba(0,0,0,0.7);
+    overflow: hidden;
+    transition: 0.5s ease;
+    width: 352px;
+    height: 0px;
+    top: 10px;
+    left: 10px;
+    right: 0px;
+}
+
+.release-date{
+    white-space: nowrap; 
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    font-size: 35px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.upcoming {
+    max-width: 352px;
+    max-height: 441px;
+}
+
+.upcoming:hover .date-overlay{
+    height: 441px;
 }

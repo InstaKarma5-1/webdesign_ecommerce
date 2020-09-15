@@ -9,23 +9,24 @@
 </head>
 <body>
     
+    <?php include "navbar.php"; ?>
     
-    <p style="text-align: center; font-family: 'Abel', sans-serif; font-size: 25px;"><strong>LOGIN</strong></p>
+    <p id="title">LOGIN</p>
     
     <br><br>
 
     <div id="form_box">
-        <form action="form.php" method="POST">
+        <form action="form-handlers/login-form.php" method="POST">
             
-            <label for="EMAIL">EMAIL</label><br>
-            <input class="input_field" name="EMAIL" type="email" size="31" required>
+            <label for="email">EMAIL</label><br>
+            <input id="email" class="input_field" name="email" type="email" size="31" required>
 
             <br><br>
 
-            <label for="PASSWORD">PASSWORD</label><br>
-            <input class="input_field" name="PASSWORD" type="password" size="31" required>
+            <label for="password">PASSWORD</label><br>
+            <input id="password" class="input_field" name="password" type="password" size="31" required>
         
-            <p>Forgot password?</p>
+            <a href="forgot-password.php" id="forget-password-link">Forgot password?</a>
 
             <p style="text-align: center;">
                 <button id="LoginBacon" type="submit">
@@ -39,15 +40,9 @@
         
     <p style="text-align: center; font-family: 'Abel', sans-serif; font-size: 25px; 
     ">Don't have an account?<br>
-    Sign up <u><a href="sign up.php">Here</a></u>.</p>
+    Sign up <a href="sign-up.php" id="here" >here</a>.</p>
 
-    <?php
+    <?php include "footer.html"; ?>
 
-        $emailail = $_POST["MAIL"MAIL"];
-        $pswd = $_POST["PASSWORD"];
-        echo $EMAILmailail;
-        echo $pswd;
-
-    ?>
 </body>
 </html>

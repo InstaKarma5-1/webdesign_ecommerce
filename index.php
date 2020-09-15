@@ -1,3 +1,21 @@
+<?php
+    session_start();
+    
+    $servername = "localhost";
+    $username = "root";
+    $dbPassword = "";
+    $dbname = "bayconegg";
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $dbPassword, $dbname);
+    // Check connection
+    if ($conn->connect_error) {
+        echo '<script>alert("First time around? Welcome to 🥓🥚!");</script>';
+        include('database.php');
+        echo '<script>window.location = "index.php";</script>';
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -11,7 +29,10 @@
     </head>
 
     <body>
-        <?php include "navbar.html"; ?>
+        <?php 
+            include "navbar.php";
+
+        ?>
 
         <div class="search_bar">
             <input id="main_search" name="Search" type="text" placeholder="Searching for games?">
@@ -19,15 +40,15 @@
 
         <div class="slideshow-container">
             <div class="images fade">
-                <a href="#atri-game"><img class="image-links" src="images/index/atri-slideshow.png" style="width:100%;"></a>
+                <a href="product.php?gameId=1"><img class="image-links slideshow" src="images/index/atri-slideshow.png" style="width:100%;"></a>
             </div>
 
             <div class="images fade">
-                <a href="#nekopara-game"><img class="image-links" src="images/index/nekopara-slideshow.png" style="width:100%;"></a>
+                <a href="product.php?gameId=2"><img class="image-links slideshow" src="images/index/nekopara-slideshow.png" style="width:100%;"></a>
             </div>
 
             <div class="images fade">
-                <a href="#sao-game"><img class="image-links" src="images/index/sao-slideshow.png" style="width:100%;"></a>
+                <a href="product.php?gameId=3"><img class="image-links slideshow" src="images/index/sao-slideshow.png" style="width:100%;"></a>
             </div>
             <br>
 
@@ -43,32 +64,47 @@
         <p id="title"><b>BEST SELLERS</b></p>
         <div class="catalogue" id="best-seller">
             <div class="game">
-                <a href="#dead_by_daylight"><img class="image-links" src="images/index/dead-by-daylight_large.png" alt="Dead by Daylight"></a><br>
-                <a href="#dead_by_daylight" class="links">Dead by Daylight</a>
+                <a href="product.php?gameId=4"><img class="image-links" src="images/products/dead-by-daylight.png" alt="Dead by Daylight"></a><br>
+                <a href="product.php?gameId=4" class="links">Dead by Daylight</a>
             </div>
             <div class="game">
-                <a href="#minecraft"><img class="image-links" src="images/index/minecraft_large.png" alt="Minecraft"></a><br>
-                <a href="#minecraft" class="links">Minecraft</a>
+                <a href="product.php?gameId=5"><img class="image-links" src="images/products/minecraft.png" alt="Minecraft"></a><br>
+                <a href="product.php?gameId=5" class="links">Minecraft</a>
             </div>
             <div class="game">
-                <a href="#fall_guys"><img class="image-links" src="images/index/fall-guys_large.png" alt="Fall Guys"></a><br>
-                <a href="#fall_guys" class="links">Fall Guys</a>
+                <a href="product.php?gameId=6"><img class="image-links" src="images/products/fall-guys.png" alt="Fall Guys"></a><br>
+                <a href="product.php?gameId=6" class="links">Fall Guys: Ultimate Knockout</a>
             </div>
         </div>
 
         <p id="title"><b>UPCOMING GAMES</b></p>
         <div class="catalogue" id="upcoming-games">
             <div class="game">
-                <a href="#gtav_vatician_city"><img class="image-links" src="images/index/gtav-vatican-city_large.png" alt="GTA V: Vatician City"></a><br>
-                <a href="#gtav_vatician_city" class="links">GTA V: Vatician City</a>
+                <div class="upcoming">
+                    <img src="images/index/gta-vatican-city.png" alt="GTA V: Vatician City">
+                    <div class="date-overlay">
+                        <div class="release-date">Coming Spring 2021</div>
+                    </div>
+                </div>
+                <p class="links">GTA V: Vatician City</p>
             </div>
             <div class="game">
-                <a href="#half-life-3"><img class="image-links" src="images/index/half-life3_large.png" alt="Half-Life 3"></a><br>
-                <a href="#half-life-3" class="links">Half-Life 3</a>
+                <div href="#"  class="upcoming">
+                    <img src="images/index/half-life-3.png" alt="Half-Life 3">
+                    <div class="date-overlay">
+                        <div class="release-date">Coming... Maybe never?</div>
+                    </div>
+                </div>
+                <p class="links">Half-Life 3</p>
             </div>
             <div class="game">
-                <a href="#kirby"><img class="image-links" src="images/index/kirby_large.png" alt="Kirby"></a><br>
-                <a href="#kirby" class="links">Kirby</a>
+                <div href="#"  class="upcoming">
+                    <img src="images/index/kirby.png" alt="Kirby">
+                    <div class="date-overlay">
+                        <div class="release-date">Coming 20.12.2020</div>
+                    </div>
+                </div>
+                <p class="links">Kirby</p>
             </div>
         </div>
 

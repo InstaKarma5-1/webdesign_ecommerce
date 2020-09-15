@@ -10,7 +10,10 @@
 
 </head>
 <body>
-    <p id="title"><u>SIGN UP</u></p>
+
+    <?php include "navbar.php"; ?>
+
+    <p id="title">SIGN UP</p>
    
    <br>
 
@@ -20,7 +23,7 @@
             <label for="email">EMAIL</label><br>
             <input class="input_field" id="email" name="email" type="email" placeholder="hellocannot@gsc.com" onblur="validate()" required>
             
-            <p id="emailValidation">Enter proper email woi diu lei nyasing</p>
+            <p id="emailValidation">Invalid email! Please type a valid email.</p>
 
             <br><br>
 
@@ -32,12 +35,25 @@
             <label for="confirm-password">CONFIRM PASSWORD</label><br>
             <input class="input_field" id="confirm-password" name="confirm-password" type="password" onblur="validate()" required>         
     
-            <p id="passwordValidation">Password do not match! diu lei nyasing</p>
+            <p id="passwordValidation">Password do not match! Please check your password.</p>
 
             <br><br>
 
             <label for="phone">PHONE NUMBER</label><br>
-            <input class="input_field" id="phone" name="phone" type="tel" placeholder="012-3456789" pattern="01[0-9]-[0-9]{7,8}" onblur="validate()" required>
+            <input class="input_field" id="phone" name="phone" type="tel" placeholder="012-3456789" pattern="01[0-9]-[0-9]{7,8}"
+            onblur="validate()" required>
+    
+            <br><br>
+
+            <label for="sec-question">SECURITY QUESTION</label><br>
+            <textarea class="text_area" id="sec-question" name="sec-question" 
+            placeholder="Please input a question only you know the answer to" cols="30" rows="5" required></textarea>
+    
+            <br><br>
+
+            <label for="sec-answer">ANSWER</label><br>
+            <textarea class="text_area" id="sec-answer" name="sec-answer" 
+            placeholder="Please input the answer to your question and store it safely" cols="30" rows="5" required></textarea>
     
             <br><br>
             
@@ -49,7 +65,7 @@
         </form>  
     </div>
         
-
+    <?php include "footer.html"; ?>
     
 </body>
 </html>

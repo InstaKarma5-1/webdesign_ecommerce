@@ -1,7 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
-body{
-	background:#191D21;
+
+*{
+    cursor: url("../Icons/cursor32.png") 7 7, auto;
 }
+
+
+body {
+    margin: 0px;
+    background-color: #191D21;
+    color: #A3F7BF;
+}
+
 .p_info_top{
 	display:flex;
 	color:#A0F4BE;
@@ -31,8 +40,17 @@ body{
 	font-family: "Abel", sans-serif;
 	padding-left:12.5%;
 }
+
+.row {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 85%;
+}
+
 .column{
-	float:left;
 	width:28%;
 	text-align:center;
 }

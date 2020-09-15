@@ -1,9 +1,4 @@
 <?php
-    $email = $_POST["email"];
-    $userPassword = $_POST["password"];
-    $confirmpassword = $_POST["confirm-password"];
-    $phone = $_POST["phone"];
-
     $servername = "localhost";
     $username = "root";
     $dbPassword = "";
@@ -16,18 +11,12 @@
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-
-    // $email = test_input($_POST["email"]);
-    // if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    //     $emailErr = "Invalid email format";
-    // }
     
-    // $sql = "SELECT email FROM user WHERE email = $email";
-    
-    // if ($email == $conn->query($sql)) {
-    //     echo "The email already exists.";
-    //     return false;
-    // }
+    $phone = $_POST["phone"];
+    $email = mysqli_real_escape_string($conn, $_POST["email"]);
+    $userPassword = mysqli_real_escape_string($conn, $_POST["password"]);
+    $securityQuestion = mysqli_real_escape_string($conn, $_POST["sec-question"]);
+    $securityAns = mysqli_real_escape_string($conn, $_POST["sec-answer"]);
 
     $sql="SELECT * FROM user WHERE email = '$email';";
     $res = mysqli_query($conn, $sql);
@@ -35,12 +24,21 @@
         $row = mysqli_fetch_assoc($res);    
         if($email==$row['email']) 
         {
-            echo "Email already exists";
-            exit;
+            echo '
+            <script type="text/javascript">
+                alert("Email has been taken! Please use another email or click \"Forget Password\"");
+                window.location = "../sign-up.php";
+            </script>
+            ';
         }
     }
     else{
-        echo "*$!?!* ok lahhh" . "<br>"; 
+        echo '
+        <script type="text/javascript">
+            alert("Account registration successful!");
+            window.location = "../login.php";
+        </script>
+        ';
         $valid = true;
     }
 
@@ -50,15 +48,20 @@
         VALUES ('$email', '$userPassword', '$phone')";
     
         if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
+            echo "User account created successfully";
         } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+
+        $sql = "INSERT INTO security_question (question, answer)
+        VALUES ('$securityQuestion', '$securityAns')";
+        
+        if ($conn->query($sql) === TRUE) {
+            echo "Security question saved successfully";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
         }
     }
-    
-
-
-    
 
     $conn->close();
 ?>

@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+* {
+    cursor: url("../Icons/cursor32.png") 7 7, auto;
+}
+
+body {
+    margin: 0px;
+    background-color: #191D21;
+    color: #A3F7BF;
+    font-family: 'Abel', sans-serif;
+}
+
+#gamesTable, #gamesTable th, #gamesTable td {
+    border: 1px solid #A3F7BF;
+    border-collapse: collapse;
+    margin: 5vh 5vw;
+}
