@@ -104,7 +104,7 @@ In a little town slowly being enveloped by the ocean, an unforgettable summer is
 
 ('Nekopara','Patisserie \"La Soleil\", run by Kashou Minaduki, is flourishing thanks to the help of two catgirls: Maple, full of pride and a little on the haughty side, and Cinnamon, an impulsive daydreamer.','images/products/nekopara.png', 23.00),
 
-('Sword Art Online: Alicization Lycoris','Kirito awakens in a completely unknown virtual world, but something about it feels a bit familiar...
+('Sword Art Online: AL','Kirito awakens in a completely unknown virtual world, but something about it feels a bit familiar...
 Set in Underworld, an expansive world introduced in the SWORD ART ONLINE anime, Kirito sets out on adventure in the series\' latest RPG!','images/products/sword-art-online.png', 159.00),
 
 ('Dead by Daylight','Dead by Daylight is a multiplayer (4vs1) horror game where one player takes on the role of the savage Killer, and the 

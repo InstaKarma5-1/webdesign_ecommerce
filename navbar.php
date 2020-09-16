@@ -20,20 +20,37 @@
 
 <?php
 	if (isset($_SESSION["username"])) {
-		// Grab user data from the database using the user_id
-		// Let them access the "logged in only" pages
-		echo '
-		<script>
-			var signup = document.getElementById("sign-up");
-			var login = document.getElementById("login");
-		';
-		echo "signup.textContent = 'WELCOME, " . $_SESSION['username'] . "';";
-		echo '
-			signup.href = "#";
-			login.textContent = "LOGOUT";
-			login.href = "logout.php";
-			
-		</script>
-		';
+		
+		$email = $_SESSION["email"];
+		if ($_SESSION["email"] == "admin@bayconeggs.com") {
+			echo '
+			<script>
+				var signup = document.getElementById("sign-up");
+				var login = document.getElementById("login");
+	
+				signup.textContent = "Admin Dashboard";
+				signup.href = "admin.php";
+				login.textContent = "LOGOUT";
+				login.href = "logout.php";
+			</script>
+			';
+		}
+		else {
+			// Grab user data from the database using the user_id
+			// Let them access the "logged in only" pages
+			echo '
+			<script>
+				var signup = document.getElementById("sign-up");
+				var login = document.getElementById("login");
+			';
+			echo "signup.textContent = 'WELCOME, " . $_SESSION['username'] . "';";
+			echo '
+				signup.href = "#";
+				login.textContent = "LOGOUT";
+				login.href = "logout.php";
+			</script>
+			';
+		}
+		
 	}
 ?>

@@ -16,3 +16,17 @@ body {
     border-collapse: collapse;
     margin: 5vh 5vw;
 }
+
+#admin-add-button{
+    border: 1px solid #A3F7BF;
+    border-radius: 200px;
+    padding: 10px;
+    transition: text-shadow 0.6s ease;
+    font-size: 27px;
+    position: relative;
+    cursor: pointer;
+} 
+
+#admin-add-button:hover{
+    text-shadow: 0 0 30px #A3F7BF, 0 0 50px #A3F7BF;
+}

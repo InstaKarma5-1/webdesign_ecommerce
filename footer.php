@@ -20,10 +20,10 @@
         </div>
 
         <div id="footer-page-links">
-            <a href="#">GAMES</a>
-            <a href="#">ABOUT US</a>
-            <a href="#">FAQ</a>
-            <a href="#">CONTACT</a>
+            <a href="games.php">GAMES</a>
+            <a href="about-us.php">ABOUT US</a>
+            <a href="faq.php">FAQ</a>
+            <a href="contact.php">CONTACT</a>
         </div>
 
         <p id="copyright">&copy; BAYCON & E.GG</p>

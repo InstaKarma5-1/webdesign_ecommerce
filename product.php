@@ -73,27 +73,74 @@
 				<h2>YOU MIGHT ALSO LIKE: </h2>
 			</div>
 			<br>
+
 			<div class="row">
-				<div class="column">
-					<img src ="images/products/dead-by-daylight.png" style="width:50%; height:auto;" alt="logo">
-					<h2>Dead by Daylight</h2>
-				</div>
+				<?php
 				
-				<div class="column">
-					<img src ="images/products/minecraft.png" style="width:50%; height:auto;" alt="logo">
-					<h2>Minecraft</h2>
-				</div>
-				
-				<div class="column">
-					<img src ="images/products/fall-guys.png" style="width:50%; height:auto;" alt="logo">
-					<h2>Fall Guys</h2>
-				</div>
+					$sql="SELECT MAX(gameId) AS 'noOfGames' FROM games;";
+					$res = mysqli_query($conn, $sql);
+					$row = mysqli_fetch_assoc($res);
+					$gameIdArray = range(1, $row["noOfGames"]);
+					
+					//Removing the gameId of this current page
+					unset($gameIdArray[$gameId - 1]);
+					$gameIdArrayNew = array_values($gameIdArray);
+					
+					$sql="SELECT a.gameId+1 AS 'start', MIN(b.gameId) - 1 AS 'end'
+					FROM games a, games b
+					WHERE a.gameId < b.gameId
+					GROUP BY a.gameId
+					HAVING start < MIN(b.gameId);";
+					$res = mysqli_query($conn, $sql);
+					$missingIdArray = array();
+					
+					while ($row = mysqli_fetch_assoc($res)) {
+						array_push($missingIdArray, $row["start"]);
+						array_push($missingIdArray, $row["end"]);
+					};
+
+					// Remove duplicates from misingIdArray and rearrange its index
+					$missingIdArrayUnique = array_unique($missingIdArray);
+					$missingIdArrayUniqueNew = array_values($missingIdArrayUnique);
+
+					// Subtract missingIdArrayUniqueNew from gameIdArrayNew and rearrange its index
+					$gameIdArrayMinusMissing = array_diff($gameIdArrayNew, $missingIdArrayUniqueNew);
+					$gameIdArrayMinusMissingNew = array_values($gameIdArrayMinusMissing);
+					
+					// Shuffle $gameIdArrayMinusMissing for randomness
+					shuffle($gameIdArrayMinusMissingNew);
+
+					// Print it out :D
+					$i = 0;
+					//Getting you might also like game information
+					foreach ($gameIdArrayMinusMissingNew as $randomId) {
+						if ($i > 2) {
+							break;
+						}
+						
+						$sql="SELECT gameName, gamePic FROM games WHERE gameId = $randomId;";
+						$res = mysqli_query($conn, $sql);
+						$row = mysqli_fetch_assoc($res);
+						$gameName = $row['gameName'];
+						$gamePic = $row['gamePic'];
+
+						echo '
+						<div class="column">
+						
+						<a href="product.php?gameId=' . $randomId . '"><img src="' . $gamePic . '" style="width:50%; height:auto; cursor:pointer;" alt="logo"></a>
+						<a href="product.php?gameId=' . $randomId . '"><h2 style="cursor:pointer;">' . $gameName . '</h2></a>
+						</div>
+						';
+						$i++;
+					}
+
+				?>
 			</div>
 		</div>
 
 		<br>
 		
-		<?php include "footer.html"; ?>
+		<?php include "footer.php"; ?>
 
 	</body>
 </html>
