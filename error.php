@@ -17,6 +17,6 @@
             <a href="sign-up.php" id="signup-link">Back to Sign Up</a>
         </div>
         
-        <?php include "footer.html"; ?>
+        <?php include "footer.php"; ?>
     </body>
 </html>

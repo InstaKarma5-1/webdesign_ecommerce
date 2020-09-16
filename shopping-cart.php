@@ -90,7 +90,7 @@
 
     <br><br><br><br><br><br><br><br><br>
 
-    <?php include "footer.html"; ?>
+    <?php include "footer.php"; ?>
 </body>
 
 <script src="js/shopping-cart.js"></script>

@@ -42,7 +42,7 @@
     ">Don't have an account?<br>
     Sign up <a href="sign-up.php" id="here" >here</a>.</p>
 
-    <?php include "footer.html"; ?>
+    <?php include "footer.php"; ?>
 
 </body>
 </html>

@@ -108,7 +108,7 @@
             </div>
         </div>
 
-        <?php include "footer.html"; ?>
+        <?php include "footer.php"; ?>
         <!--This script requires body to be loaded before it runs, or else it will not run correctly-->
         <script src="js/index.js"></script>
     </body>
