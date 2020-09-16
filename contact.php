@@ -28,7 +28,7 @@
                 </tr>
                 <tr>
                     <th>Address</th>
-                    <td>axiata tower, Level 20, 9, Jalan Stesen Sentral 5, Kuala Lumpur Sentral, 50470 Kuala Lumpur, Federal Territory of Kuala Lumpur</td>
+                    <td>Axiata Tower, Level 20, 9, Jalan Stesen Sentral 5, Kuala Lumpur Sentral, 50470 Kuala Lumpur, Federal Territory of Kuala Lumpur</td>
                 </tr>
             </table>
         </div>

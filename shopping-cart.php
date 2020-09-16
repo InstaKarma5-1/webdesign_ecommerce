@@ -96,13 +96,3 @@
 <script src="js/shopping-cart.js"></script>
 
 </html>
-
-
-<!-- 
-1. User comes from product.php (else say cart is empty)
-2. check for session variable (gameId)
-3a. If a div with gameId alrd exists -> say item already in cart
-3b. If a div with gameId is absent   -> add a template div and populate with info from database  
-4. When user click on add/decrease button, change the value
-5. when user submits, post data of gameId
--->

@@ -13,11 +13,6 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $email = $_SESSION["email"];
-
-    $sql="SELECT * FROM user WHERE email = '$email';";
-    $res = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_assoc($res);        
     if ($_SESSION["email"] != "admin@bayconeggs.com" ) {
         echo '
         <script>
@@ -76,7 +71,7 @@
         <p style="text-align: center;"><a id="admin-add-button" href="form-handlers/add.php">Add Game</a></p>
             
         <script>
-           for(var i = 0; i < 5; i++){ 
+            for(var i = 0; i < 5; i++) { 
                 document.write("<br>");
             }
         </script>
