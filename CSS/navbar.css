@@ -22,11 +22,7 @@
 	flex-wrap: nowrap;
 	justify-content: space-between;
 	align-items: center;
-	width: 15vw;
-}
-
-.logo {
-	width: 12.629vw;
+	width: auto;
 }
 
 a {
@@ -38,8 +34,19 @@ a {
 }
 
 .logo {
+	width: 12.629vw;
 	cursor: pointer;
 	margin-right: auto;
+}
+
+#sign-up {
+	cursor: pointer;
+	margin-right:2vw;
+}
+
+#login{
+	cursor: pointer;
+	margin-right:2vw;
 }
 
 #cart {
