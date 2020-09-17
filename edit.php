@@ -40,9 +40,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baycon & E.GG</title>
+    <link rel="stylesheet" type="text/css" href="css/edit.css">
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
 </head>
+
 <body>
-    <h1>Edit Game</h1>
+    <?php include "navbar.php"; ?>
 
     <?php
 
@@ -65,45 +69,48 @@
                 echo '
                 <script>
                     alert("You have updated the data successfully. \( ﾟヮﾟ)/");
-                    window.location = "../admin.php";
+                    window.location = "admin.php";
                 </script>
                  ';
             } else {
                 echo '  
                 <script>
                     alert("Error when modifying data. ┏༼ ◉ ╭╮ ◉༽┓ \n The error was: "'. $conn->error . '");
-                    window.location = "../admin.php";
+                    window.location = "admin.php";
                 </script>
                  ';
             }
 
     }
     else { ?>
-    <table>
+    <table id="edit-game-table">
+        <caption>Edit Game</caption>
         <form method="POST" action="">
             <tr>
-                <td><label for="game-name">Game Name</label></td>
-                <td> : <input id="game-name" type="text" name="game-name" required value="<?php echo $row['gameName']; ?>"></td>
+                <td id="table-column-label"><label for="game-name">Game Name</label></td>
+                <td id="table-column-input"><input id="game-name" type="text" name="game-name" required value="<?php echo $row['gameName']; ?>"></td>
             </tr>
             <tr>
                 <td><label for="game-desc">Game Description</label></td>
-                <td> : <textarea id="game-desc" name="game-desc" required cols="50" rows="10" ><?php echo $row['gameDesc']; ?></textarea></td>
+                <td><textarea id="game-desc" name="game-desc" required cols="50" rows="10" ><?php echo $row['gameDesc']; ?></textarea></td>
             </tr>
             <tr>
                 <td><label for="game-pic">Game Picture</label></td>
-                <td> : <input id="game-pic" type="text" name="game-pic" required value="<?php echo $row['gamePic']; ?>"></td>
+                <td><input id="game-pic" type="text" name="game-pic" required value="<?php echo $row['gamePic']; ?>"></td>
             </tr>
             <tr>
                 <td><label for="game-price">Game Price</label></td>
-                <td> : <input id="game-price" type="text" name="game-price" required value="<?php echo $row['gamePrice_RM']; ?>"></td>
+                <td><input id="game-price" type="text" name="game-price" required value="<?php echo $row['gamePrice_RM']; ?>"></td>
             </tr>
             <tr>
-                <td></td>
-                <td>&nbsp&nbsp<input type="submit" value="Update"></td>
+                <td id="table-row-update" colspan="2"><input type="submit" value="Update"></td>
             </tr>
             <input type="hidden" name="update" value="1" />
         </form>
     </table>
     <?php };?>
+
+    <?php include "footer.php"; ?>
+    <script src="js/edit.js"></script>
 </body>
 </html>

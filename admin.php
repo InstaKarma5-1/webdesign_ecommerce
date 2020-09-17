@@ -38,14 +38,14 @@
 
         <!-- READ -->
         <table id="gamesTable">
-            <caption style="font-size: 2.5vw;">Games</caption>
+            <caption>Games</caption>
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Picture Directory</th>
-                    <th>Price</th>
+                    <th id="table-column-id">ID</th>
+                    <th id="table-column-name">Name</th>
+                    <th id="table-column-desc">Description</th>
+                    <th id="table-column-pic">Picture Directory</th>
+                    <th id="table-column-price">Price</th>
                     <th colspan="2">Actions</th>
                 </tr>
             </thead>
@@ -61,14 +61,14 @@
                             <td><?php echo $row["gameDesc"]; ?></td>
                             <td><?php echo $row["gamePic"]; ?></td>
                             <td>RM <?php echo $row["gamePrice_RM"]; ?></td>
-                            <td><a href="form-handlers/edit.php?gameid=<?php echo $row["gameId"]; ?>">Edit</a></td>
+                            <td><a href="edit.php?gameid=<?php echo $row["gameId"]; ?>">Edit</a></td>
                             <td><a href="form-handlers/delete.php?gameid=<?php echo $row["gameId"]; ?>">Delete</a></td>
                         </tr>
                     <?php } while ($row = mysqli_fetch_assoc($res)); ?>
             </tbody>
         </table>
 
-        <p style="text-align: center;"><a id="admin-add-button" href="form-handlers/add.php">Add Game</a></p>
+        <p style="text-align: center;"><a id="admin-add-button" href="add.php">Add Game</a></p>
             
         <script>
             for(var i = 0; i < 5; i++) { 

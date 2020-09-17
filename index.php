@@ -84,7 +84,7 @@
                         <div class="release-date">Coming Spring 2021</div>
                     </div>
                 </div>
-                <p class="links">GTA V: Vatician City</p>
+                <p class="links">GTA V: Vatican City</p>
             </div>
             <div class="game">
                 <div href="#"  class="upcoming">
