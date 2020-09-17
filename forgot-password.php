@@ -15,7 +15,7 @@
         <div id="form_box">
 
             <form action="validate-email.php" method="post" id="email-form">
-                <label for="email">Please enter your email:</label><br>
+                <label for="email" id="title">Please enter your email:</label><br>
                 <input id="email" class="input_field" name="email" type="email" size="31" required>
                 <p style="text-align: center;">
                     <button id="SubmitBacon" type="submit" name="Submit">

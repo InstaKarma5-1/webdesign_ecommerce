@@ -10,7 +10,7 @@
     </head>
 
     <body>
-        <?php include "navbar.html"; ?>
+        <?php include "navbar.php"; ?>
 
         <div id="error-message">
             <h1>The email already exists.</h1>
