@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Baycon & E.GG</title>
-        <link rel="stylesheet" type="text/css" href="css/validate-email.css">
+        <link rel="stylesheet" type="text/css" href="css/validate-answer.css">
         <link rel="stylesheet" type="text/css" href="css/navbar.css">
         <link rel="stylesheet" type="text/css" href="css/footer.css">
     </head>
@@ -13,7 +13,7 @@
         <?php include "navbar.php"; ?>
 
         <div id="form_box">
-            <p id="title">Identities verified suk ses ful li. <br>YOUR PASSWORD IS :</p>
+            <p id="title">Identity verified successfully. <br>YOUR PASSWORD IS :</p>
             
             <!-- printing the ans  -->
             <p style="text-align: center;">
@@ -65,8 +65,8 @@
                 ?>
             </p>
             <br><br>
-            <p style="text-align: center; font-family: 'Abel', sans-serif; font-size: 25px;">
-                <a id="back-to-login" href="login.php">Back to Login</a>
+            <p class="back-to-login" style="text-align: center; font-family: 'Abel', sans-serif; font-size: 25px;">
+                <a class="back-to-login" href="login.php">Back to Login</a>
             </p>
             
         </div>

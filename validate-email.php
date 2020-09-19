@@ -13,7 +13,7 @@
         <?php include "navbar.php"; ?>
 
         <div id="form_box">
-            <p id="title">SECURITY QUESTION:</p><br>
+            <p id="title">SECURITY QUESTION:</p>
             
             <!-- printing the question  -->
             <?php
@@ -47,7 +47,7 @@
                         $res = mysqli_query($conn, $sql);
                         if (mysqli_num_rows($res) > 0) { 
                             $row = mysqli_fetch_assoc($res);
-                            echo $row['question'];
+                            echo '<div id="question-css">'. $row['question']. '</div>';
                         }
                     }
                 } else {

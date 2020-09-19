@@ -135,3 +135,7 @@ body {
 #email{
     display: none;
 }
+
+#question-css{
+    text-align: center;
+}

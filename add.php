@@ -27,14 +27,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baycon & E.GG</title>
+    <link rel="stylesheet" type="text/css" href="css/add.css">
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
 </head> 
 
 <body>
-    <h1>Add Game</h1>
+    <?php include "navbar.php"; ?>
 
     <?php
 
-        if(isset($_POST['update']) && $_POST['update']==1) {
+        if(isset($_POST['add']) && $_POST['add']==1) {
             $gameNameUpdate = $_POST['game-name'];
             $gameDescUpdate = $_POST['game-desc'];
             $gamePicUpdate = $_POST['game-pic'];
@@ -50,44 +53,47 @@
                 echo '
                 <script>
                     alert("You have added the data successfully. \( ﾟヮﾟ)/");
-                    window.location = "../admin.php";
+                    window.location = "admin.php";
                 </script>
                 ';
             } else {
                 echo '  
                 <script>
                     alert("Error when adding data. ┏༼ ◉ ╭╮ ◉༽┓ \n The error was: "'. $conn->error . '");
-                    window.location = "../admin.php";
+                    window.location = "admin.php";
                 </script>
                 ';
             }
         }
         else { ?>
-        <table>
+        <table id="add-game-table">
+            <caption>Add Game</caption>
             <form method="POST" action="">
                 <tr>
-                    <td><label for="game-name">Game Name</label></td>
-                    <td> : <input id="game-name" type="text" name="game-name" required placeholder="Insert Game Name"></td>
+                    <td id="table-column-label"><label for="game-name">Game Name</label></td>
+                    <td id="table-column-input"><input id="game-name" type="text" name="game-name" required placeholder="Insert Game Name"></td>
                 </tr>
                 <tr>
                     <td><label for="game-desc">Game Description</label></td>
-                    <td> : <textarea id="game-desc" name="game-desc" required cols="50" rows="10" placeholder="Insert Description Here"></textarea></td>
+                    <td><textarea id="game-desc" name="game-desc" required cols="50" rows="10" placeholder="Insert Description Here"></textarea></td>
                 </tr>
                 <tr>
                     <td><label for="game-pic">Game Picture</label></td>
-                    <td> : <input id="game-pic" type="text" name="game-pic" required placeholder="Remember to upload pictures to images/products"></td>
+                    <td><input id="game-pic" type="text" name="game-pic" required placeholder="Remember to upload pictures to images/products"></td>
                 </tr>
                 <tr>
                     <td><label for="game-price">Game Price</label></td>
-                    <td> : <input id="game-price" type="text" name="game-price" required placeholder="Insert Game Price 🤑"></td>
+                    <td><input id="game-price" type="text" name="game-price" required placeholder="Insert Game Price"></td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td>&nbsp&nbsp<input type="submit" value="Add"></td>
+                    <td id="table-row-add" colspan="2"><input type="submit" value="Add"></td>
                 </tr>
-                <input type="hidden" name="update" value="1" />
+                <input type="hidden" name="add" value="1" />
             </form>
         </table>
     <?php };?>
+
+    <?php include "footer.php"; ?>
+    <script src="js/add.js"></script>
 </body>
 </html>

@@ -22,21 +22,19 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Baycon & E.GG</title>
-        <link rel="stylesheet" type="text/css" href="css/index.css">
         <link rel="stylesheet" type="text/css" href="css/navbar.css">
         <link rel="stylesheet" type="text/css" href="css/footer.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
         <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet"> 
     </head>
 
     <body>
         <?php 
             include "navbar.php";
-
         ?>
 
-        <div class="search_bar">
-            <input id="main_search" name="Search" type="text" placeholder="Searching for games?">
-        </div>
+        <p style="text-align: center; margin: 8vh 0;"><a href="games.php" id="index_title" class="links">Looking for more games? Click me!</a></p>
+
 
         <div class="slideshow-container">
             <div class="images fade">
@@ -86,7 +84,7 @@
                         <div class="release-date">Coming Spring 2021</div>
                     </div>
                 </div>
-                <p class="links">GTA V: Vatician City</p>
+                <p class="links">GTA V: Vatican City</p>
             </div>
             <div class="game">
                 <div href="#"  class="upcoming">
